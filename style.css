@@ -1,0 +1,108 @@
+ /* 定义网页外观(外边距，背景颜色) */
+ * {
+     margin: 0px;
+     background-color: #303030;
+     color: #D0D0D0
+   }
+ /* 定义分区外观(边框，内边距，背景颜色) */
+ section,footer {
+     border: 5px #303030 solid;
+     padding: 30px 35px;
+     background-color: #363636
+   }
+ /* 定义段落，大标题，中标题，超链接背景颜色 */
+ p,h1,h3,a{
+     background-color: #363636
+   }
+ /* 定义超链接外观 */
+ a{
+     color: #8f8f8f;
+     text-decoration: none;
+     padding: 1vh
+   }
+ a:hover{
+     text-decoration: underline
+   }
+ /* header 分区 */
+ header a{
+     background-color: #303030;
+     padding: 0px
+   }
+ header{
+     border: 0px;
+     padding: 30px 35px
+   }
+ header h2{
+     position: relative;
+     left: 2vw;
+     top: 1vw;
+     color: #D0D0D0
+   }
+ header img{
+     position: relative;
+     top: 0.9vw;
+     left: 0.7vw
+   }
+ header li{
+     display: inline;
+     margin-right: 2vw;
+     position: relative;
+     left: 66vw;
+     bottom: 1.6vw
+   }
+ /* footer 分区 */
+ footer {
+     text-align: center;
+     font-size: 15px;
+     color: #707070
+   }
+ /* section 分区 main 板块 */
+ .main img{
+     position: relative;
+     top: 5px;
+     left: -1vw;
+     border-radius: 10px
+   }
+ /* section 分区 contact 板块 */
+ .contact p{
+     line-height: 5vw
+   }
+ .contact h1{
+     line-height: 12vw
+   }
+ /* section 分区 音乐播放器 */
+ .music{
+     background-color: #363636;
+     height: 20vw
+   }
+ .music img{
+     background-color: #363636;
+     position: relative;
+     top: 6vw;
+     border-radius: 10px
+   }
+ .music li{
+     background-color: #363636;
+     position: relative;
+     left: 3vw;
+     list-style-type: none
+   }
+ .music ul{
+     background-color: #363636
+   }
+ .player{
+     background-color: #363636;
+     border-radius: 1px
+   }
+ audio{
+     width: 47vw;
+     background-color: #363636;
+     border-radius: 0px;
+     position: relative;
+     left: 42vw;
+     bottom: 6vw
+   }
+ audio::-webkit-media-controls-enclosure{
+     background-color: rgba(125,125,125,1);
+     border-radius: 10px
+   }
