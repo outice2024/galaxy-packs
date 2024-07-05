@@ -1,4 +1,4 @@
- /* 定义网页外观(外边距，背景颜色) */
+ /* 定义网页外观(外边距，背景颜色，文本颜色) */
  * {
      margin: 0px;
      background-color: #303030;
@@ -24,19 +24,18 @@
      text-decoration: underline
    }
  /* header 分区 */
+ header{
+     padding: 30px 35px;
+     height: 6vw
+   }
  header a{
      background-color: #303030;
      padding: 0px
    }
- header{
-     border: 0px;
-     padding: 30px 35px
-   }
  header h2{
-     position: relative;
-     left: 2vw;
-     top: 1vw;
-     color: #D0D0D0
+     position: absolute;
+     left: 7vw;
+     top: 4vw
    }
  header img{
      position: relative;
@@ -45,10 +44,12 @@
    }
  header li{
      display: inline;
-     margin-right: 2vw;
-     position: relative;
-     left: 66vw;
-     bottom: 1.6vw
+     margin-right: 2vw
+   }
+ header ul{
+     position: absolute;
+     right: 6vw;
+     top: 6vw
    }
  /* footer 分区 */
  footer {
@@ -73,12 +74,13 @@
  /* section 分区 音乐播放器 */
  .music{
      background-color: #363636;
-     height: 20vw
+     height: 18vw
    }
  .music img{
      background-color: #363636;
      position: relative;
-     top: 6vw;
+     top: 3.5vw;
+     right: 15vw;
      border-radius: 10px
    }
  .music li{
@@ -90,9 +92,8 @@
  .music ul{
      background-color: #363636
    }
- .player{
-     background-color: #363636;
-     border-radius: 1px
+ .player_1{
+     background-color: #363636
    }
  audio{
      width: 47vw;
@@ -106,3 +107,13 @@
      background-color: rgba(125,125,125,1);
      border-radius: 10px
    }
+ /* 响应式语法布局(屏幕宽度大于或等于800px时触发) */
+ @media screen and (min-width: 800px){
+     .contact p{
+         line-height: 3vw
+       }
+     .contact h1{
+         line-height: 8vw
+       }
+   }
+ 
