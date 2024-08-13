@@ -1,312 +1,442 @@
  *{
      margin: 0px;
      padding: 0px;
-     background-color: #2e2e2e;
+     background-color: #111111;
      color: #d4d4d4
    }
  
  
  
  
- header,section,footer{
-     padding: 6vw;
-     background-color: #363636;
-     border: 1vw #2e2e2e solid 
-   }
- 
- h1,p,img,div{
-    background-color: rgba(0,0,0,0) 
+ section,footer,header{
+     padding: 4vw
    }
  
  
  
  
- /* header 定义 */
+ /* 页眉 */
  header{
-     background-color: rgba(0,0,0,0);
-   }
+     background-color: rgba(5,5,5,0.8);
+     z-index: 99999; /* 修复动画层数漏洞 */
+     padding: 4vw;
+     width: 100%;
+     position: fixed
+   } 
  header h1{
-     text-shadow: 0px 0px 2px #ffffff;
-     background-color: rgba(0,0,0,0)
-   }
- header li{
-     display: inline;
-     padding: 1vw;
-     background-color: rgba(0,0,0,0)
-   }
- header a{
-     text-decoration: none;
-     font-size: 18px;
-     color: #8a8a8a;
-     background-color: rgba(0,0,0,0)
-   }
- header ul{
-     position: absolute;
-     right: 7vw;
-     top: 8vw;
+     margin-left: 1.5vw;
+     font-size: 30px;
      background-color: rgba(0,0,0,0)
    }
  
  
  
  
- /* section 定义 */
- section h1{
-     margin-bottom: 3vw
-   }
- section a{
-     background-color: rgba(0,0,0,0)
-   }
- 
- 
- 
- 
- /* section - main-title */
- .main-title h1{
-     font-size: 6vw;
-     background-color: rgba(0,0,0,0);
-     transition-property: text-shadow;
-     transition-duration: 1s;
-     transition-timing-function: ease;
-       
-     animation-name: object-appear;
-     animation-duration: 3s;
-     animation-iteration-count: 1;
-     animation-direction: normal;
-   }
- .main-title h1:hover{
-     text-shadow: 0px 0px 3px #ffffff
-   }
- .main-title p{
-     font-size: 14px;
-     background-color: rgba(0,0,0,0);
-     transform: translate(0px,-8px);
-     
-     animation-name: object-appear-under;
-     animation-duration: 3s;
-     animation-iteration-count: 1;
-     animation-direction: normal;
-   }
- .main-title img{
-     margin-right: 10px;
-     border-radius: 5px;
-     
-     transition-property:  box-shadow:;
-     transition-duration: 1s;
-     transition-timing-function: ease
-   }
- .main-title img:hover{
-     box-shadow: 1px 1px 3px #000000
-   }
+ /* 主标题 */
  .main-title{
-     height: 35vw;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     
-     background-image: url("https://i.iluoli.moe/2024/07/23/669f74fc1697c.png");
+     height: 70vh;
+     border-radius: 15px;
+     background-image: url("https://im.gurl.eu.org/file/05735bff8a8fbe4cc2a29.jpg");
      background-repeat: no-repeat;
      background-size: cover;
-     background-position: bottom
+     background-position: center;   
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center
    }
- 
- 
- 
- 
- /* section - project */
- .project a{
-     text-decoration: none;
-     position: absolute;
-     right: 10vw;
-     color: #8a8a8a;
+ .main-title h1{
+     font-size: 6.5vw;
+     margin-top: 6vw;
+     opacity: 1;
      
-     transition-property: text-shadow;
-     transition-duration: 1s;
-     transition-timing-function: in_ease
-   }
- .project a:hover{
-     text-shadow: 2px 2px 5px #ffffff
-   }
- 
- 
- 
- 
- /* section - links */
- .links p{
-     margin-bottom: 3vw
-   }
- .links a{
-     text-decoration: none;
-     position: absolute;
-     right: 10vw;
-     color: #8a8a8a;
-     
-     transition-property: text-shadow;
-     transition-duration: 1s;
-     transition-timing-function: in_ease
-   }
- .links a:hover{
-     text-shadow: 2px 2px 5px #ffffff
+     animation-name: object-appear-offset-I;
+     animation-duration: 3s;
+     animation-iteration-count: 1;
+     animation-direction: normal;
+     text-shadow: 1px 1px 8px #ffffff;
+     background-color: rgba(0,0,0,0)
    }
  
- 
- 
- 
- /* section - personal-links */
- .personal-links li{
+ .main-title p{
+     font-size: 15px;
+     margin-bottom: 2vw;
      background-color: rgba(0,0,0,0);
-     padding: 5px;
+     text-shadow: 0px 0px 15px #ffffff;
+     
+     animation-name: object-appear-offset-II;
+     animation-duration: 3s;
+     animation-iteration-count: 1;
+   }
+ 
+ .main-title a{
+     border: 2px #616161 solid;
+     border-radius: 10px;
+     padding: 10px 14px;
+     color: #d4d4d4;
+     text-decoration: none;
+     font-size: 15px;
+     background-color: rgba(0,0,0,0);
+     
+     animation-name: object-appear-alpha;
+     animation-duration: 10s;
+     animation-iteration-count: 1;
+   }
+ 
+ 
+ 
+ 
+ /* 客户端优势 */
+ .advantage {
+     border: 1vw #111111 solid;
+     padding: 1vw;
+     background-color: #171717;
+     display: flex;
+     align-items: center;
+     justify-content: space-between
+   }
+ 
+ .advantage div{
+     width: 120px;
+     text-align: center;
+     padding: 10vw;
+     background-color: rgba(0,0,0,0)
+   }
+ 
+ .advantage img{
+     width: 70%;
+     background-color: rgba(0,0,0,0);
+     transition-property: transform,filter;
+     transition-duration: 1.5s;
+     transition-timing-function: ease
+   }
+ 
+ .advantage img:hover{
+     transform: scale(1.15);
+     filter: drop-shadow(2px 2px 3px #d4d4d4)
+   }
+ 
+ .advantage h3{
+     font-size: 18px;
+     background-color: rgba(0,0,0,0);  
+     transition-property: text-shadow;
+     transition-duration: 1.5s;
+     transition-timing-function: ease
+   }
+ 
+ .advantage h3:hover{
+     text-shadow: 1px 1px 3px #ffffff
+   }
+ 
+ .advantage p{
+     font-size: 10px;
+     background-color: rgba(0,0,0,0);
+     margin-bottom: 12px
+   }
+ 
+ 
+ 
+ 
+ /* 功能信息 */
+ .mod-info{
+     border: 1vw #111111 solid;
+     background-color: #171717;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center
+   }
+ 
+ .mod-info-div{
+     width: 90%;
+     padding: 10vw;
+     margin-top: 13px;
+     background-color: rgba(0,0,0,0);
+     background-image: url("https://im.gurl.eu.org/file/f0d1a2ba4f2d79c0ff5bf.png");
+     background-size: 50%;
+     background-position: center;
+     background-repeat: no-repeat
+   }
+ 
+ .mod-info-img{
+     width: 60%;
+     background-color: rgba(0,0,0,0);
+     border-radius: 10px;
+     box-shadow: 3px -3px 10px 2px #111111;
+     transform: translate(-25px,33px);
+     animation-name: image-float;
+     animation-duration: 2s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-direction: alternate
+   }
+ 
+ .mod-info p{
+     background-color: rgba(0,0,0,0);
+     font-size: 16px;
+     margin-bottom: 6vw
+   }
+
+
+
+ /* 制作团队 */
+ .team{
+     height: 200px;
+     border: 1vw #111111 solid;
+     background-color: #171717;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center
+   }
+
+ .team p{
+     text-align: center;
+     padding: 4px;
+     font-size: 16px;
+     background-color: rgba(0,0,0,0);
+     font-weight: 300
+   }
+ .team b{
+     background-color: rgba(0,0,0,0)
+   } 
+
+
+
+
+ /* 答疑解惑 */
+ .helper{
+     border: 1vw #111111 solid;
+     background-color: #171717;
+     background-position: center;
+     padding: 12vw;   
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center
+   }
+ 
+ .helper h3{
+     font-size: 25px;
+     background-color: rgba(0,0,0,0);
+     transition-property: text-shadow;
+     transition-duration: 1.5s;
+     transition-timing-function: ease
+   }
+ 
+ .helper h3:hover{
+     text-shadow: 1px 1px 8px #ffffff
+   }
+
+ .helper p{
+     margin: 2.8vw;
+     font-size: 15px;
+     background-color: rgba(0,0,0,0)
+   }
+ 
+ .helper a{
+     border: 2px #616161 solid;
+     border-radius: 10px;
+     padding: 10px 14px;
+     color: #d4d4d4;
+     text-decoration: none;
+     font-size: 15px;
+     background-color: rgba(0,0,0,0)
+   }
+ 
+ 
+ 
+ 
+ /* 相关链接 */
+ .links{
+     border: 1vw #111111 solid;
+     background-color: #171717;
+   }
+ .links li{
+     background-color: rgba(0,0,0,0);
+     padding: 15px;
      list-style: none
    }
- .personal-links ul{
+ .links ul{
      background-color: rgba(0,0,0,0);
      display: flex;
      align-items: center;
      justify-content: center
    }
- .personal-links a{
-     display: flex;
+ .links a{
+   display: flex;
      align-items: center;
      justify-content: center;
      text-decoration: none;
      font-size: 5vw;
-     width: 40px;
-     height: 40px;
+     width: 50px;
+     height: 50px;
      background-color: rgba(0,0,0,0);
    }
- .personal-links i{
+ .links i{
      background-color: rgba(0,0,0,0);
      transition-duration: 1s;
      transition-property: color,filter;
      transition-timing-function: ease
    }
- .personal-links i:hover{
+ .links i:hover{
      color: var(--color);
      filter: drop-shadow(2px 2px 2px var(--color))
    }
-  
  
  
  
  
- /* section - music-share */
- .music-info img{
-     border-radius: 15px;
-     background-color: rgba(0,0,0,0)
-   }
- .music-info p{
-     display: inline-block;
-     transform: translate(15px,-25px);
-     font-weight: bold;
-     font-size: 18px;
-     background-color: rgba(0,0,0,0)
-   }
- .player audio{
-     width: 100%;
-     margin-top: 10px
-   }
-  audio::-webkit-media-controls-enclosure{
-     background-color: rgba(125,125,125,0.8);
-     border-radius: 10px
-   }
- 
- 
- 
- 
- /* footer */
- footer p{
+ /* 页尾 */
+ footer{
      text-align: center;
-     transition-property: text-shadow:;
-     transition-duration: 1s;
-     transition-timing-function: ease
-   }
- footer p:hover{
-     text-shadow: 0px 0px 3px #ffffff
+     border: 1vw #111111 solid;
+     padding: 4vw;
+     background-color: rgba(0,0,0,0)
    }
  
  
  
+ 
+ /* 定义动画 */
+ @keyframes image-float{
+     0%{
+         transform: translate(-25px,33px);
+       }
+     100%{
+         transform: translate(-25px,20px)
+       }
+   }
+ @keyframes image-float-offset{
+     0%{
+         transform: translate(-13px,20px)
+       }
+     100%{
+         transform: translate(-13px,10px)
+       }
+   }
+ @keyframes object-appear-offset-I{
+     0%{
+         opacity: 0.3;
+         transform: translate(0px,-10px)
+       }
+     100%{
+         opacity: 1;
+         transform: translate(0px,0px)
+       }
+   }
+ @keyframes object-appear-offset-II{
+     0%{
+         opacity: 0.3;
+         transform: translate(0px,10px)
+       }
+     100%{
+         opacity: 1;
+         transform: translate(0px,0px)
+       }
+   }
+ @keyframes object-appear-alpha{
+     0%{
+         opacity: 0
+       }
+     100%{
+         opacity: 1
+       }
+   } 
 
-  @keyframes object-appear{
-      0%{
-          opacity: 0.3;
-          transform: translate(0px,-10px)
-        }
-      100%{
-          opacity: 1;
-          transform: translate(0px,0px)
-        }
-    }
-  
-  
-  
-  
-  @keyframes object-appear-under{
-      0%{
-          opacity: 0.3;
-          transform: translate(0px,0px)
-        }
-      100%{
-          opacity: 1;
-          transform: translate(0px,-8px)
-        }
-    }
-
-
-
-
+ 
+ /* 响应式语法结构 */
   @media screen and (max-width: 800px){
-      section h1{
-          text-align: center;
-          font-size: 15px;
-          padding: 3vw
-        }
-      section p{
-          font-size: 9px
-        }
-      
-      
-      
-      
-      .music-info p{
-         font-size: 13px;
-         position: relative;
-         top: 13px;
-         right: 10px
-        }
-      .music-info img{
-          width: 50px;
-          border-radius: 5px
-        }
-      
-      
-      
-      
-      .main-title{
-          height: 83vh
-        }
-      .main-title h1{
-          font-size: 25px
-        }
-      .main-title img{
-          width: 6vw;
-          transform: translate(0px,3px)
-        }
-      .main-title p{
-          font-size: 10px
-        }
-      
-      
-      
-      
-       footer p{
-          font-size: 12px
-        }
-       header h1{
-          font-size: 16px
-        }
-       header a{
-          font-size: 10px
-        }
-    }
+    
+    
+    
+    
+    header h1{
+        font-size: 18px
+      }
+    header a{
+        font-size: 10px
+      }
+    header ul{
+        top: 4vw
+      }
+
+
+
+
+    .main-title {
+        height: 95vh
+      }
+    .main-title h1{
+        font-size: 7.8vw;
+        margin-bottom: 2vw
+      }
+    .main-title p{
+        font-size: 3vw;
+        margin-bottom: 20px
+      }
+
+
+
+
+    .advantage{
+        flex-direction: column;
+        padding: 15vw
+      }
+    .advantage img{
+        padding: 5px
+      }
+    .advantage h3{
+        margin-bottom: 10px;
+        font-size: 20px
+      }
+    .advantage p{
+        font-size: 12px
+      }
+ 
+
+
+    .mod-info-img{
+        transform: translate(-20px,33px);
+        animation-name: image-float-offset
+      }
+    .mod-info p{
+        font-size: 12px
+      }
+  
+  
+  
+  
+    .team p{
+        font-size: 12px
+      }
+  
+  
+  
+  
+    .helper h3{
+        font-size: 20px
+      }
+    .helper p{
+        font-size: 12px
+      }
+    
+    
+    
+    
+    .links li{
+        padding: 5px
+      }
+    .links a{
+        width: 25px;
+        height: 25px
+      }
+    
+    
+    
+    
+     footer{
+         font-size: 10px
+       }
+  }
