@@ -299,6 +299,7 @@
  
  
  
+
  /* 定义动画 */
  @keyframes image-float{
      0%{
@@ -366,7 +367,8 @@
 
 
     .main-title {
-        height: 95vh
+        height: 95vh;
+         background-image: url("https://im.gurl.eu.org/file/45ea838d5dfcf66959d91.png");
       }
     .main-title h1{
         font-size: 7.8vw;
